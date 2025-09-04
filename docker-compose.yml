@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+ teamtalk:
+  image: teamtalk:5.19
+  container_name: teamtalk
+  restart: unless-stopped
+  ports:
+   - "10333:10333/tcp"
+   - "10333:10333/udp"
+  volumes:
+   - ./config:/etc/teamtalk:ro
+   - ./data:/var/lib/teamtalk
+   - ./logs:/var/log/teamtalk
