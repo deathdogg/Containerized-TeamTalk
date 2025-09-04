@@ -1,7 +1,6 @@
-version: '3.9'
 services:
  teamtalk:
-  image: teamtalk:5.19
+  image: deathdogg0/teamtalk:latest
   container_name: teamtalk
   restart: unless-stopped
   ports:
